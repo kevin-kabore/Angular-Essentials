@@ -1,0 +1,11 @@
+<p>This is the Dashboard Component!</p>
+
+<div>
+	<button (click)="onSwitchState()">Switch State</button>	
+</div>
+
+<!-- <p>{{ loadState }}</p> -->
+<p [textContent]="loadState"></p>
+
+<!-- <input type="text" (input)="loadState = $event.target.value"> -->
+<input type="text" [(ngModel)]="loadState">

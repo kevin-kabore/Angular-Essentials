@@ -3,11 +3,7 @@ import { Component } from '@angular/core';
 
 @Component({
 	selector: 'app-dashboard',
-	template: `
-	<input type="text" [(ngModel)]="loadState">
-	<p>{{ loadState }}</p>
-	<button (click)="onDashboardClick($event)">Load</button>
-	`
+	templateUrl: './dashboard.component.html'
 
 })
 
@@ -15,7 +11,7 @@ import { Component } from '@angular/core';
 export class DashboardComponent {
 	loadState = 'loading';
 
-	onDashboardClick(event) {
+	onSwitchState(event) {
 		this.loadState = 'finished';
 	}
 };
